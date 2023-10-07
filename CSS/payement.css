@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+
+}
+input[type="submit"]{
+    background-color: aquamarine;
+    padding: 5px;
+    border-radius: 5px;
+    width: 50%;
+    font-weight: bold;
+    font-size: larger;
+}
+input[type="submit"]:hover{
+    background-color: aqua;
+    cursor: pointer;
+}
+.wholesome{
+    background-color: whitesmoke;
+    border: 1px;
+    padding: 10px;
+    font-size: large;
+
+
+}
+.heading{
+    text-align: center;
+    border: 5px;
+    margin: 10px;
+    background-color:plum;
+    border-radius: 6px;
+}
+.info{
+    color: green ;
+    font-weight: bolder;
+}
