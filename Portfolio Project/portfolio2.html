@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Shudhanshu Arya</title>
     <style>
-        *{margin: 0px;
+        * {
+            margin: 0px;
             padding: 0px;
 
         }
-        body{
+
+        body {
             background-color: aliceblue;
-            
+
         }
-        nav{
+
+        nav {
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -22,55 +26,177 @@
             height: 80px;
             text-decoration: solid;
         }
-        nav ul{
+
+        nav ul {
             display: flex;
             justify-content: center;
         }
-        nav ul li{
+
+        nav ul li {
             list-style: none;
             margin: 0 23px;
         }
-        .left{
+
+        .left {
             font-size: 1.5rem;
         }
-        .firstsection{
+
+        .firstsection {
             display: flex;
             justify-content: space-around;
             margin: 23px 0;
         }
-        .firstsection >div{
+
+        .firstsection>div {
             width: 40%;
-            /* margin: 60px 20px; */
             padding: 40px;
             align-items: center;
-
         }
-        .leftsection{
+
+        .leftsection {
             font-size: 2rem;
             letter-spacing: 3px;
             margin: 95px;
-            
         }
-        .righsection img{
-            width: 80%;
+        .righsection_container {
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
             border-radius: 100%;
-            
+            animation: bg 4s infinite;
         }
-        .purpole{
-            color: cadetblue;
+        @keyframes bg {
+            0% {
+                background-color: #000;
+            }
+            25% {
+                background-color: #333;
+            }
+            50% {
+                background-color: #666;
+            }
+            75% {
+                background-color: #333;
+            }
+            100% {
+                background-color: #000;
+            }
         }
-        nav ul li a:hover{
+        .righsection_container img {
+            width: 400px;
+            height: 450px;
+            border-radius: 100%;
+
+        }
+
+        .purpole {
+            color: darkcyan;
+        }
+
+        nav ul li a:hover {
             color: aquamarine;
             cursor: pointer;
             font-size: 1.05rem;
 
         }
-        #element{
-            color:darkcyan;
+
+        #element {
+            color: darkcyan;
+            font-weight: bold;
         }
 
+        .line {
+            margin: 44px 72px;
+            height: 1.9px;
+            color: black;
+        }
+
+        .secondsection {
+            margin: auto;
+            max-width: 80vw;
+            height: 80vh;
+        }
+
+        .secondsection h1 {
+            font-size: 1.9rem;
+        }
+
+        .grey {
+            color: grey;
+            border-color: grey;
+            text-decoration: underline;
+        }
+
+        .secondsection .box {
+            background: black;
+            width: 80vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+
+        .secondsection .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: black;
+            margin: 0 70px;
+
+
+        }
+
+        /* .image-top{
+                width: 23px;/
+            } */
+        .vertical-title {
+            position: relative;
+            top: 100px;
+            width: 100px;
+
+        }
+
+        .vertical-decs {
+            position: relative;
+            top: 110px;
+            color: gray;
+            width: 110px;
+            font-size: 9px;
+
+        }
+
+        footer {
+            background-color: gray;
+            
+        }
+
+        .footer {
+
+            margin: 23px 122px;
+            display: flex;
+            padding-top: 50px;
+            justify-content: space-evenly;
+        }
+        .footer-second ul li{
+           list-style: none;
+           margin-bottom: 5px;
+        }
+        .footer-third ul li{
+            list-style: none;
+            margin-bottom: 5px;
+        }
+        .footer-four ul li{
+            list-style: none;
+            margin-bottom: 5px;
+        }
+        footer .footer-rights{
+            text-align: center;
+            padding: 1rem;
+            color: rgb(33, 32, 32);
+            
+            
+        }
     </style>
 </head>
+
 <body>
     <header>
         <nav>
@@ -79,8 +205,8 @@
                 <ul>
                     <li><a>Home</a></li>
                     <li><a>Portfolio</a></li>
-                    <li><a>Project</a></li>
-                    <li><a>Contact US</a></li>
+                    <li><a>Skills</a></li>
+                    <li><a>Contact Us</a></li>
                 </ul>
             </div>
         </nav>
@@ -88,21 +214,130 @@
     <main>
         <section class="firstsection">
             <div class="leftsection">Hey! My name is <span class="purpole">Shudhanshu </span>and I'm a passionate
-                <span id="element"></span></div>
+                <span id="element"></span>
+            </div>
             <div class="righsection">
-                <img src="/imag/edited.jpg" alt="">
+                <div class="righsection_container">
+                    <img src="/imag/shudhanshu.png" alt="">
+                </div>
+            </div>
+
+        </section>
+        <hr class="line">
+        <section class="secondsection">
+            <span class="grey">What I have done so far</span>
+            <h1>Top Skills</h1>
+            <div class="box">
+                <div class="vertical">
+                    <div class="vertical-title">
+                        HTML/CSS
+                    </div>
+                    <div class="vertical-decs">
+                        Proficient in HTML and CSS for creating polished web designs and user-friendly web experiences.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <div class="vertical-title">
+                        Tailwind CSS
+                    </div>
+                    <div class="vertical-decs">
+                        Expert in Tailwind CSS, enhancing web design efficiency and responsiveness.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <div class="vertical-title">
+                        JavaScript
+                    </div>
+                    <div class="vertical-decs">
+                        JavaScript mastery for crafting impressive,dynamic and interactive web development.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <div class="vertical-title">
+                        C/C++
+                    </div>
+                    <div class="vertical-decs">
+                        Mastery in C and C++ for software development, algorithms, and system-level programming,
+                        ensuring efficiency and performance
+                    </div>
+                </div>
+                <div class="vertical">
+                    <div class="vertical-title">
+                        Leadership
+                    </div>
+                    <div class="vertical-decs">
+                        Active NCC member, cultivating strong leadership skills, teamwork, and discipline through
+                        training and service initiatives
+                    </div>
+                </div>
+                <div class="vertical">
+                    <div class="vertical-title">
+                        DSA
+                    </div>
+                    <div class="vertical-decs">
+                        Proficient in Data Structures and Algorithms, enabling efficient problem-solving and optimized
+                        software development.
+                    </div>
+
+                </div>
+                <div class="vertical">
+                    <div class="vertical-title">
+                        Kotlin
+                    </div>
+                    <div class="vertical-decs">
+                        Proficient in Kotlin for versatile and efficient Android app development, ensuring robust and
+                        scalable solutions.
+                    </div>
+                </div>
             </div>
 
         </section>
     </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>SHUDHANSHU ARYA</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li>About us</li>
+                    <li>Blog</li>
+                    <li>Carrer</li>
+                    <li>Patnership</li>
+                </uL>
+            </div>
+            <div class="footer-third">
+                <ul>
+                    <li>Connectivity</li>
+                    <li>Dashboard</li>
+                    <li>Hologram Hyper</li>
+                    <li>Hologram Nova</li>
+                </ul>
+            </div>
+            <div class="footer-four">
+                <ul>
+                <li>Twitter</li>
+                <li>Facebook</li>
+                <li>Linkdin</li>
+                <li>GitHub</li>
+            </uL>
+            </div>
+        </div>
+        <div class="footer-rights">
+            Made with ❤️ by Arya | ©2023 All rights reserved
+        </div>
+    </footer>
+
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-     <!-- Setup and start animation! -->
-  <script>
-    var typed = new Typed('#element', {
-      strings: ['Web developer','Programmer','Content writter','yotube creator.' ],
-      typeSpeed: 50,
-    });
-  </script>
-    
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Programmer', 'Content Writter', 'Youtube creator.'],
+            typeSpeed: 50,
+        });
+    </script>
+
+
 </body>
+
 </html>
