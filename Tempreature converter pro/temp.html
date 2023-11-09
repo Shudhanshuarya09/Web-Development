@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shudhanshu</title>
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+
+        #itempcalc {
+            text-align: center;
+        }
+
+        .submit button {
+            background-color: black;
+            color: aliceblue;
+            width: 120px;
+            font-size: larger;
+            cursor: pointer;
+
+        }
+
+        .submit :hover {
+            background-color: purple;
+
+        }
+
+        .submit {
+            height: 20px;
+
+        }
+
+        .section1>div {
+            border-radius: 3rem;
+            background-color: #181818;
+            width: 50%;
+            text-align: center;
+            height: 250px;
+            margin-top: 210px;
+            margin-left: 320px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .heading {
+            text-decoration: solid;
+            font-size: 26px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="section1">
+        <div id="tempcalc">
+            <div class="heading">
+                <label for="temp">Please enter the tempreature you would like to enter</label>
+            </div>
+            <br><input type="number" name="temp" id="temperature">
+            <select name="temp_diff" id="temp_diff">
+                <option value="0"></option>
+                <option value="1">celsius</option>
+                <option value="2">Farhenheit</option>
+            </select><br><br>
+            <div class="submit">
+                <button type="button" name="temp" id="submit">Submit</button>
+            </div><br>
+            <span id="resultcontainer"></span>
+
+        </div>
+
+    </section>
+
+</body>
+
+<script>
+    const submit = document.getElementById('submit').addEventListener('click', () => {
+        const value = document.getElementById('temp_diff').value;
+        const result = document.getElementById('resultcontainer');
+        const temp = document.getElementById('temperature').value;
+        if (value == 1) {
+            const cel = ((temp - 32) * 5) / 9
+            result.innerText = `${cel} °C`;
+        } else if (value == 2) {
+
+            const far = (temp * 9 / 5) + 32;
+            result.innerText = `${far} °F`;
+        }
+    })
+</script>
+
+</html>
