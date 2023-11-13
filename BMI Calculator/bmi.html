@@ -12,7 +12,7 @@
 <body>
     <nav class="bg-green-700 text-black flex justify-between ">
         <div class="w-36 h-12 ">
-            <img src="/BMI Calculator/image/ARYA-logo-isolated.png" alt="">
+            <img src="./image/ARYA-logo-isolated.png" alt="logo">
         </div>
         <div class="flex items-center">
             <ul class="justify-end flex space-x-6 px-4 text-lg font-semibold content-center">
@@ -53,14 +53,16 @@
             <p class="font-bold text-2xl py-3 ">Age:</p>
             <input type="number " name="age" id="age">
             <p class="font-bold text-2xl px-2 py-3">Weight:</p>
-            <input type="number " name="age" id="age">
+            <input type="number " name="age" id="weight">
 
             <p class="font-bold text-2xl py-3"> Height</p>
-            <input type="number " name="age" id="age">
+            <input type="number " name="age" id="height">
             <br>
             <br>
-            <button class="bg-red-500 font-bold text-white rounded-xl text-3xl w-56 text-center justify-center">
-                CALCULATE</button>
+            <button class="bg-red-700 font-bold text-white rounded-xl text-3xl w-56 text-center justify-center" onclick="bmiCalculator()">
+                CALCULATE
+            </button>
+            <h1 id="bmi-result"></h1>
         </div>
     </div>
     <section class="bg-white">
@@ -89,7 +91,7 @@
     <footer class="bg-green-700">
         <ul class="flex">
             <div class="w-72 py-6">
-                <img src="/BMI Calculator/image/ARYA-logo-isolated.png" alt="">
+                <img src="./image/ARYA-logo-isolated.png" alt="">
 
                 <p class="px-14 font-normal  ">Hey there, I'm Shudhanshu Arya. I built Arya's to help reach my own
                     health and fitness goals. I hope that it will help you too. The site is updated regularly with tons
@@ -135,7 +137,21 @@
         </div>
     </footer>
 
+    <script>
+        console.log("HEllo World");
+        
+        function bmiCalculator () {
+            const age = document.getElementById('age').value;
+            const weight = document.getElementById('weight').value;
+            const height = document.getElementById('height').value;
 
+            // console.log(age,weight,height);
+            const bmi = weight/Math.pow(height,2);
+            console.log("BMI ==> ",bmi );
+            const bmiResult = document.getElementById("bmi-result");
+            bmiResult.innerHTML = `Your BMI is ${bmi} !`;
+        }
+    </script>
 </body>
 
 </html>
